@@ -39,6 +39,13 @@ body{
   place-items: center center;
 }
 
+a{
+  color: white;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
 .circles{
   width: 200px;
   height: 200px;
