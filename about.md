@@ -14,7 +14,7 @@ UltraDAO is a group of artists and art collectors, working together to create a 
 
 The core ethos of UltraDAO is to shape and support new ways to create and experience art.
 
-Our desire is to bring everyone together to learn, create, evolve, and share. This is why art exists, and it is why humanity exists: to live, breathe, ad feel. Our goal in the short term is to use our influence to support and promote artists who are bringing the world new perspective through their unique expression and message. These important artifacts will be preserved and recorded, stewarded and shared with the world.
+Our desire is to bring everyone together to learn, create, evolve, and share. This is why art exists, and it is what reminds us that we are human. Our goal in the short term is to use our influence to support and promote artists who are bringing the world new perspective through their unique expression and message. These important artifacts will be preserved and recorded, stewarded and shared with the world.
 
 ### Short-term goals
 
