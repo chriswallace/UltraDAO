@@ -42,7 +42,7 @@ This is a tentative plan of action, however, it is subject to change at any time
 
 All new members of UltraDAO will be required to submit a tribute to gain shares initially. You can submit any amount of `WMATIC` to join the DAO, there is no bottom limit (except zero :-) ). All tributes must be submitted in `WMATIC`.
 
-Each share in the initial fundraising period is valued at **3500 WMATIC**. You may purchase **up to 5 shares**. This limit is to prevent any hostile takeover while we are establishing our early membership.
+Each share in the initial fundraising period is valued at **35 WMATIC**. You may purchase **up to 500 shares**. This limit is to prevent any hostile takeover while we are establishing our early membership.
 
 ### Instructions
 
