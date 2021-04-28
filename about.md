@@ -18,7 +18,7 @@ Our desire is to bring everyone together to learn, create, evolve, and share. Th
 
 ### Short-term goals
 
-We are participating in the [BOTANICA](https://rarible.com/botanica) project by [Liquid Density](https://twitter.com/liquiddensity), as one of the five tessellation factions. We will use initial funds to purchase key NFTs within the project that will allow us to advanced our goals and establish dominance over the other factions.
+We are participating in the [BOTANICA](https://rarible.com/botanica) project by [Liquid Density](https://twitter.com/liquiddensity), as one of the five tessellation factions. We will use initial funds to purchase key NFTs within the project that will allow us to advance our goals and establish dominance over the other factions.
 
 ### Future goals
 
