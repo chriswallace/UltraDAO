@@ -159,7 +159,7 @@ strong{
   max-width: 800px;
   margin: 200px auto;
   padding-bottom: 200px;
-  max-width: calc(100% - 4rem);
+  width: calc(100% - 4rem);
 }
 
 a{
