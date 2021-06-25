@@ -27,7 +27,7 @@ As of June 2021, our goals are currently aligned with the following:
 5. Projects and investments led by DAO members like metaverse.
 6. Crypto investments and long-term growth of our member wealth.
 
-## Our current collection
+## Our NFT Collection
 
 You can browse <a href="https://rainbow.me/ultradao.eth">the UltraDAO collection</a> to see all the NFTs we have collected to date.
 
