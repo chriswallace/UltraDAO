@@ -24,7 +24,7 @@ As of June 2021, our goals are currently aligned with the following:
 2. Building and showcasing our collection in the metaverse 
 3. Growing a community and creating a strong network of creators, artists, and collectors.
 4. Releasing and selling NFTs that fund other DAO initiatives and collecting activities.
-5. Projects and investments led by DAO members like metaverse.
+5. Projects and investments proposed by and voted through by DAO members.
 6. Crypto investments and long-term growth of our member wealth.
 
 ## Our NFT Collection
