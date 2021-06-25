@@ -33,13 +33,13 @@ You can browse <a href="https://rainbow.me/ultradao.eth">the UltraDAO collection
 
 ### Joining the DAO
 
-All new members of UltraDAO will be required to submit a tribute to gain shares initially. You can submit any amount of `WMATIC` to join the DAO, there is no bottom limit (except zero :-) ). All tributes must be submitted in `WMATIC`.
+All new members of UltraDAO will be required to submit a tribute to gain shares initially. A tribute is an initial investment of capital in exchange for partial ownership of the DAO. All tributes must be submitted in `WMATIC`.
 
-Each share in the initial fundraising period is valued at **35 WMATIC**. You may purchase **up to 500 shares**. This limit is to prevent any hostile takeover while we are establishing our early membership.
+Each share in the initial fundraising period is valued at **35 WMATIC**. You may purchase **up to 500 shares**. This limit is to prevent any hostile takeover while we are establishing our early membership. The more shares you purchase, the greater your ownership and voting power in UltraDAO.
 
 ### Instructions
 
-Joining the DAO requires submitting a member proposal and a Tribute in exchange for a certain number of shares. Because we are using the `MATIC` RPC Network to manage the DAO, there are a few steps you must take before you can access the DAO.
+Joining the DAO requires submitting a member proposal and a Tribute in exchange for shares. Because we are using the `MATIC` RPC Network to manage the DAO, there are a few steps you must take before you can access the DAO platform to submit proposals and vote.
 
 **Step 1:** Add the `MATIC` RPC Network to Metamask. You need to switch your RPC network every time you interact with the DAO. [Setup Instructions](https://docs.matic.network/docs/develop/metamask/config-matic/)
 
