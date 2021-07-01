@@ -55,7 +55,15 @@ Approve the addition of the Polygon/Matic RPC Network when this screen pops up.
 
 **Step 4:** Wrap your tribute amount of `MATIC` using [QuickSwap](https://quickswap.exchange/#/swap?inputCurrency=MATIC&outputCurrency=WMATIC). Make sure you do not wrap all of your `MATIC`. You will need to hold some for gas fees on the Polygon chain (similar to ether on ethereum). Setting aside 10-20 `MATIC` should be enough for now.
 
-**Step 5:** Submit your [Member Proposal](https://app.daohaus.club/dao/0x89/0xdb278a7b6fd089b48ecca44bde4b24c6dcd29e0a/proposals/new/member) to join the DAO. Enter your name and provide a link to your twitter or website so we can learn more about you. No need to add a description unless you want to. Enter the number of shares you would like in the DAO and attach 35 WMATIC per share in the Tribute Amount. You may also need to approve the `WMATIC` token in order to submit.
+**Step 5:** Create a [Member Proposal](https://app.daohaus.club/dao/0x89/0xdb278a7b6fd089b48ecca44bde4b24c6dcd29e0a/proposals/new/member) to join the DAO. Enter your name and provide a link to your twitter or website so we can learn more about you. No need to add a description unless you want to. Enter the number of shares you would like in the DAO and attach 35 WMATIC per share in the Tribute Amount. 
+
+![Proposal Example]({{ site.url }}/assets/img/proposal-example.png)
+
+**Step 6:** Make sure to unlock the `WMATIC` token for trading on the polygon chain. There is an orange button above the tribute field that will allow you to do this.
+
+![Unlock Token Button]({{ site.url }}/assets/img/unlock.png)
+
+**STEP 7:** Submit your proposal! Approve the transaction in Metamask and click the link to the transaction to watch it process!
 
 ###  Troubleshooting
 
