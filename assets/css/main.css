@@ -157,7 +157,7 @@ strong{
 
 .container{
   max-width: 800px;
-  margin: 200px auto;
+  margin: 0 auto;
   padding-bottom: 200px;
   width: calc(100% - 4rem);
 }
@@ -202,4 +202,33 @@ a.secret{
   border: 6px solid white;
   border-radius: 200px;
   box-shadow: 0 0 30px rgba(255,255,255,1), inset 0 0 30px rgba(255,255,255,1);
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.primary-nav{
+  font-size: 18px;
+}
+
+.primary-nav li{
+  display: inline;
+}
+
+.primary-nav li:first-child{
+  font-weight: bold;
+}
+
+.primary-nav a{
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 10px;
+}
+
+.primary-nav a:hover{
+  color: #1CDCE9;
+  text-decoration :underline;
 }
