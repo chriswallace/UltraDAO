@@ -41,15 +41,21 @@ Each share in the initial fundraising period is valued at **35 WMATIC**. You may
 
 Joining the DAO requires submitting a member proposal and a Tribute in exchange for shares. Because we are using the `MATIC` RPC Network to manage the DAO, there are a few steps you must take before you can access the DAO platform to submit proposals and vote.
 
-**Step 1:** Add the `MATIC` RPC Network to Metamask. You need to switch your RPC network every time you interact with the DAO. [Setup Instructions](https://docs.matic.network/docs/develop/metamask/config-matic/)
+**Step 1:** Visit the [UltraDAO DAOhaus](https://app.daohaus.club/dao/0x89/0xdb278a7b6fd089b48ecca44bde4b24c6dcd29e0a/proposals) and click the MATIC button in the top right corner. This will add a new RPC Network to Metamask for interacting with the DAOhaus platform. 
 
-**Step 2:** Purchase enough `MATIC` in your Metamask wallet to cover your tribute amount as well as some small amount for processing proposals (gas fees). Gas is minimal so you don't need a ton, but there are some transaction fees in the next step you need to be aware of. 
+![DAOhaus]({{ site.url }}/assets/img/daohaus.png)
 
-**Step 3:** Use the [Matic Bridge](https://wallet.matic.network/bridge) to transfer your `MATIC` from the Ethereum mainnet to the Matic mainnet.
+Approve the addition of the Polygon/Matic RPC Network when this screen pops up.
 
-**Step 4:** Wrap your tribute amount of `MATIC` using [QuickSwap](https://quickswap.exchange/#/swap?inputCurrency=MATIC&outputCurrency=WMATIC). Make sure you do not wrap all of your `MATIC` as that is what you will use for gas fees on this chain (similar to ether on ethereum).
+![Metamask]({{ site.url }}/assets/img/metamask.png)
 
-**Step 5:** Submit a [Member Proposal](https://app.daohaus.club/dao/0x89/0x5c0f7e6225640a82585fc2c2d92ecafc342e185a/proposals/new/member) to join the DAO. Enter your name and provide a link to your twitter or website so we can learn more about you. No need to add a description unless you want to. Enter the number of shares you would like in the DAO and attach 35 WMATIC per share in the Tribute Amount. You may also need to approve MATIC as a transaction.
+**Step 2:** Time to get some `MATIC`! You can buy it directly through Coinbase or use [Uniswap](https://uniswap.exchange) to convert ethereum to `MATIC`. You will want to get enough `MATIC` to cover the number of shares you are looking to acquire. For example, if you want 20 shares, you would need to multiple 35 by 20 to get 700 `MATIC`. 
+
+**Step 3:** Use the [Matic Bridge](https://wallet.matic.network/bridge) to move your `MATIC` from the Ethereum mainnet to the Matic chain.
+
+**Step 4:** Wrap your tribute amount of `MATIC` using [QuickSwap](https://quickswap.exchange/#/swap?inputCurrency=MATIC&outputCurrency=WMATIC). Make sure you do not wrap all of your `MATIC`. You will need to hold some for gas fees on the Polygon chain (similar to ether on ethereum). Setting aside 10-20 `MATIC` should be enough for now.
+
+**Step 5:** Submit your [Member Proposal](https://app.daohaus.club/dao/0x89/0x5c0f7e6225640a82585fc2c2d92ecafc342e185a/proposals/new/member) to join the DAO. Enter your name and provide a link to your twitter or website so we can learn more about you. No need to add a description unless you want to. Enter the number of shares you would like in the DAO and attach 35 WMATIC per share in the Tribute Amount. You may also need to approve the `WMATIC` token in order to submit.
 
 ###  Troubleshooting
 
