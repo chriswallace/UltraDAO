@@ -6,7 +6,7 @@ subtitle: How to get involved
 
 # UltraDAO
 
-> A DAO for the arts, by the artists. [Join the movement](https://discord.gg/zaCX4ceK).
+> A DAO for the arts, by the artists. [Join the movement](https://discord.gg/xECS6ScW).
 
 ## Manifesto
 
