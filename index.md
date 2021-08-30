@@ -19,10 +19,10 @@ The core ethos of UltraDAO is to shape and support new ways to create and experi
 Our goals are:
 
 1. Collect NFTs with historical and intrinsic value, especially incredible art from under-represented artists
-2. Build and showcasing our collection in the metaverse 
-3. Grow a community and creating a strong network of creators, artists, and collectors.
-4. Produce NFTs that fund other DAO initiatives and collecting activities.
-5. Release projects and make investments proposed by and voted through by DAO members.
+2. Build and showcase our collection in the metaverse 
+3. Create a strong network of creators, artists, and collectors
+4. Produce NFTs that fund other DAO initiatives
+5. Release projects and make investments proposed by and voted through by DAO members
 
 ## NFT Collection
 
