@@ -157,8 +157,8 @@ strong{
 
 .container{
   max-width: 800px;
-  margin: 0 auto;
-  padding-bottom: 200px;
+  margin: 80px auto 0;
+  padding-bottom: 80px;
   width: calc(100% - 4rem);
 }
 
