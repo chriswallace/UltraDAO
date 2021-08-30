@@ -109,7 +109,7 @@ ul{
 }
 
 ol{
-  list-style: lower-roman;
+  list-style: numbers;
   padding-left: 2rem;
 }
 
