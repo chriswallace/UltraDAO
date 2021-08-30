@@ -1,31 +1,28 @@
 ---
 layout: content
-title: About UltraDAO
-subtitle: How to get involved
+title: UltraDAO
+subtitle: A DAO for artists
 ---
 
 # UltraDAO
 
-> A DAO for the arts, by the artists. [Join the movement](https://discord.gg/wfyZwCugmF).
+> A DAO for the arts, by the artists. [Join us on Discord](https://discord.gg/wfyZwCugmF).
 
 ## Manifesto
 
 UltraDAO is a group of artists and art collectors, working together to create a strong **community** through art and technology.
 
-The core ethos of UltraDAO is to shape and support new ways to create and experience art.
+The core ethos of UltraDAO is to shape and support new ways to create and experience art. We use our influence to support and promote artists bringing a new perspective through unique self-expression and formats. We collect important digital artifacts that will be preserved and shared with the world.
 
-Our desire is to bring everyone together to learn, create, evolve, and share. This is why art exists, and it is what reminds us that we are human. Our goal in the short term is to use our influence to support and promote artists who are bringing the world new perspective through their unique expression and message. These important artifacts will be preserved and recorded, stewarded and shared with the world.
+### Current Goals
 
-### Future goals
+Our goals are:
 
-As of June 2021, our goals are currently aligned with the following:
-
-1. Collecting NFTs with historical and intrinsic value, especially incredible art from under-represented artists
-2. Building and showcasing our collection in the metaverse 
-3. Growing a community and creating a strong network of creators, artists, and collectors.
-4. Releasing and selling NFTs that fund other DAO initiatives and collecting activities.
-5. Projects and investments proposed by and voted through by DAO members.
-6. Crypto investments and long-term growth of our member wealth.
+1. Collect NFTs with historical and intrinsic value, especially incredible art from under-represented artists
+2. Build and showcasing our collection in the metaverse 
+3. Grow a community and creating a strong network of creators, artists, and collectors.
+4. Produce NFTs that fund other DAO initiatives and collecting activities.
+5. Release projects and make investments proposed by and voted through by DAO members.
 
 ## NFT Collection
 
