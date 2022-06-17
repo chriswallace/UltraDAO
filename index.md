@@ -45,7 +45,7 @@ Key members of our DAO include some of the top artists and NFT collectors in the
 * [Gossamer Rozen](https://twitter.com/grelysian)
 * [Fancy Crystal](https://twitter.com/crystaladalyn)
 * [Bitcoinski](https://twitter.com/bitcoinski)
-* [Richard Powazsyksi](https://twitter.com/rpowazynski)
+* [Richard Powazynski](https://twitter.com/rpowazynski)
 * [DesLucrece](https://twitter.com/deslucrece)
 * [Calvin Hoenes](https://twitter.com/calvinhoenes)
 * [NFTConny](https://twitter.com/nftconny)
