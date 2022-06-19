@@ -7,7 +7,12 @@ common-css:
 <html lang="{{ page.language | default: site.language | default: 'en' }}">
 {% include head.html %}
 
-<body>
+{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
+
+{% capture id_prefix %}{% if post %}post{% else %}page{% endif %}{% endcapture %}
+{% capture id %}{{ id_prefix }}-{{ page.url | replace:'/','-' }}{% endcapture %}
+
+<body class="{{ layout }} {{ id }}">
 
   {{ content }}
 
