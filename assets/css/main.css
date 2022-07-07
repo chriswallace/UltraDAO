@@ -238,6 +238,13 @@ img{
   position: relative;
 }
 
+h1 img{
+  vertical-align: middle;
+  padding-right: 14px;
+  margin-right: 10px;
+  border-right: 2px solid #666;
+}
+
 .panel{
   width: 100%;
 }
@@ -258,6 +265,10 @@ img{
     padding-top: 12vh;
     padding-bottom: 12vh;
   }
+}
+
+.panel-top .panel-inner{
+  padding-top: 2vh;
 }
 
 .panel-inner h1,
@@ -290,7 +301,7 @@ img{
 
 .page--creator-membership h1{
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .page--creator-membership h2{
