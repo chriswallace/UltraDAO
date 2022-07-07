@@ -16,4 +16,5 @@ Our goal is to give power back to the creators, the artists, the culture-shapers
 
 * [UltraDAO Creator Membership](/creator-membership.html): our official creator token
 * [Woodies](https://woodiesnft.com): our official PFP and first major project
+* [Legends of Wondermist](https://legends.woodiesnft.com): digital card collectibles with art from the Woodies community
 * ULTRAPASS: our official collector token (coming soon)
