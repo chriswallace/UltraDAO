@@ -152,6 +152,16 @@ a.secret{
   
 }
 
+hr{
+  width: 40px;
+  background-color: #666;
+  height: 2px;
+  border: none;
+  padding: 0;
+  margin: 0 auto 15px 0;
+  display: inline-block;
+}
+
 img{
   max-width: 100%;
   height: auto;
