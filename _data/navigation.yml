@@ -1,0 +1,9 @@
+- name: Home
+  url: /
+  title: A web3 creative studio
+- name: Creator Membership
+  url: /creator-membership
+  title: A membership for digital artists and web3 creators
+- name: ULTRAPASS&trade;
+  url: /ultrapass
+  title: An exclusive membership for art collectors

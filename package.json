@@ -1,0 +1,24 @@
+{
+  "name": "jekyll-tailwindcss-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:shenlu89/jekyll-tailwindcss-starter.git",
+  "author": "Shenlu",
+  "email": "shenlu89 <shenlu89dev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "jekyll:serve": "bundle exec jekyll serve --incremental --watch",
+    "jekyll:build": "bundle exec jekyll build",
+    "css:build": "npx tailwindcss -i ./assets/css/index.css -o ./assets/css/main.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.4",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.6"
+  },
+  "dependencies": {}
+}
