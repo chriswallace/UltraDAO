@@ -12,5 +12,5 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css" />
   <link rel="stylesheet" async href="{{ site.github.url }}/assets/css/syntax.css" />
-  {% seo %}
+  {% seo title=false %}
 </head>
