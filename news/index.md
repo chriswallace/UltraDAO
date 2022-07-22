@@ -2,6 +2,7 @@
 title: News
 layout: page
 permalink: /news.html
+image: /assets/images/ultradao-cover.png
 ---
 
 <section class="text-2xl">
