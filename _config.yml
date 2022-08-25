@@ -1,7 +1,7 @@
 # site
 url: https://ultradao.org
 author: Chris Wallace
-title: "UltraDAO" # the name of your site, e.g. ACME Corp.
+title: "UltraDAO" # the name of your site, e.g. ACME Corp
 
 # markdown
 markdown: kramdown
