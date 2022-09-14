@@ -2,7 +2,7 @@
 layout: post
 title: NFT Collection Woodies Premieres New Animated Short Film, ‘Woodies Origin’
 subtitle: In the Tradition of Pixar, Innovative Web3 Entertainment Brand Brings Beloved Characters to Life with a Family Friendly Storyline
-date: 2022-07-15 -0500
+date: 2022-09-14 -0500
 image: 'https://miro.medium.com/max/875/1*QfNeJtT-FNm4fCKfh7GAqQ.jpeg'
 ---
 
