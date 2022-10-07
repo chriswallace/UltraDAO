@@ -12,11 +12,11 @@
   }
 
   h1 {
-    @apply font-light text-6xl pb-16 text-5xl md:text-6xl leading-tight md:leading-tight;
+    @apply font-light text-6xl pb-16 text-5xl md:text-6xl leading-tight;
   }
 
   h2 {
-    @apply font-light text-5xl pb-4;
+    @apply font-light text-3xl pb-4 leading-normal;
   }
 
   p,
@@ -158,4 +158,12 @@ nav{
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.btn-gold-border {
+  background: 
+    linear-gradient(#DEAE83, #A16B39) padding-box,
+    linear-gradient(to right, #DEAE83, #A16B39) border-box;
+  border-radius: 5px;
+  border: 4px solid transparent;
 }

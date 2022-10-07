@@ -31,6 +31,10 @@ module.exports = {
           800: '#27272a',
           900: '#18181b',
         },
+        gold: {
+          300: '#DEAE83',
+          500: '#A16B39',
+        }
       },  
       minWidth: {
         '1': '0.25rem',
@@ -53,6 +57,10 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
+            p: {
+              "font-size"   : "1.25rem",
+              "font-weight" : "300",
+            },
             a: {
               color: '#fff',
               '&:hover': {
