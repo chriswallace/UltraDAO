@@ -37,8 +37,11 @@
         <a href="/creator-membership" class="block mt-4 no-underline lg:inline-block lg:mt-0 hover:text-white mr-4">
           Creator Membership
         </a>
-        <a href="https://ultrapass.ultradao.org" class="block mt-4 no-underline lg:inline-block lg:mt-0 hover:text-white mr-4">
+        <a href="/ultrapass" class="block mt-4 no-underline lg:inline-block lg:mt-0 hover:text-white mr-4">
           ULTRAPASS&trade;
+        </a>
+        <a href="/curated/1" class="block mt-4 no-underline lg:inline-block lg:mt-0 hover:text-white mr-4">
+          Curated
         </a>
       </div>
       <div>
