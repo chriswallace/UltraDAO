@@ -23,25 +23,6 @@ image: assets/images/ultradao-cover.png
   </div>
 </div>
 
-<div class="grid grid-cols-2 justify-start md:grid-cols-4 pt-4 pb-0">
-  <div class="pb-8">
-    <div class="mb-2 text-neutral-400">Sale type</div> 
-    <div class="font-bold text-2xl normal">Fixed price</div>
-  </div>
-  <div class="pr-8 pb-8">
-    <div class="mb-2 text-neutral-400">Mint price</div> 
-    <div class="font-bold text-2xl normal">0.15eth</div>
-  </div>
-  <div class="pr-8 pb-8">
-    <div class="mb-2 text-neutral-400">Mint opens</div> 
-    <div class="font-bold text-2xl normal">Oct. 14 @ 6AM PST</div>
-  </div>
-  <div class="pr-8 pb-8">
-    <div class="mb-2 text-neutral-400">Supply</div> 
-    <div class="font-bold text-2xl normal">500</div>
-  </div>
-</div>
-
 <picture>
   <source 
     srcset="
@@ -61,18 +42,71 @@ image: assets/images/ultradao-cover.png
   />
 </picture>
 
-<div class="{{ page.markdown }} max-w-none leading-6 py-8">
+<div class="grid grid-cols-3 gap-8">
 
-    <div class="w-full max-w-none py-8 max-w-prose prose">
+  <div class="{{ page.markdown }} max-w-none leading-6 py-8 col-span-2">
 
-        <h2>About the collection</h2>
-        
-        <p>Isles upon Deemed Rivers & Other Wonders (IDROW) is a 500 piece artist-curated algorithmic collection that subverts visual identity and intent by reorganizing the pixels of its source images to produce tranquil and mystical abstracts imbued with new semantic context arising from their natural appeal to the human predilection for pareidolia.</p>
+      <div class="w-full max-w-none py-8 max-w-prose prose">
 
-        <p>In order to produce the series, Daïm applied his unconventional pixel-sorting algorithm to a collection of source images generated via Stable Diffusion, an AI image synthesis system, thereby radically transforming them into peaceful, often naturalistic images that disavow their origins and instead present as islands, monuments, and apparitions of a world that is at once alien and yet comfortingly familiar.</p>
-        
-        <p>Being the genesis art collection from UltraDAO, one of the world's longest-running and most well-established DAOs, it is fitting that this unique series by long-time member and early Art Blocks Curated artist Daïm employs a popular algorithmic technique to unconventional but masterly effect.</p>
+          <h2>About the collection</h2>
+          
+          <p>Isles upon Deemed Rivers & Other Wonders (IDROW) is a 500 piece artist-curated algorithmic collection that subverts visual identity and intent by reorganizing the pixels of its source images to produce tranquil and mystical abstracts imbued with new semantic context arising from their natural appeal to the human predilection for pareidolia.</p>
+
+          <p>In order to produce the series, Daïm applied his unconventional pixel-sorting algorithm to a collection of source images generated via Stable Diffusion, an AI image synthesis system, thereby radically transforming them into peaceful, often naturalistic images that disavow their origins and instead present as islands, monuments, and apparitions of a world that is at once alien and yet comfortingly familiar.</p>
+          
+          <p>Being the genesis art collection from UltraDAO, one of the world's longest-running and most well-established DAOs, it is fitting that this unique series by long-time member and early Art Blocks Curated artist Daïm employs a popular algorithmic technique to unconventional but masterly effect.</p>
+      </div>
+
+  </div>
+
+  <div class="pt-8">
+    <div class="p-10 border border-2 border-white rounded-md">
+
+      <!-- Import NiftyKit Components library -->
+      <script type="module" src="https://unpkg.com/@niftykit/components/dist/components/components.esm.js">
+      </script>
+      <style>
+      nk-dropkit::part(wallet-btn),
+      nk-dropkit::part(mint-btn),
+      nk-dropkit::part(mint-dropdown-icon),
+      nk-dropkit::part(mint-text) {
+        font-family: Space Grotesk,sans-serif;
+        --tw-bg-opacity: 1;
+        background-color: rgb(79 70 229/var(--tw-bg-opacity));
+        font-size: 1rem;
+        line-height: 2rem;
+        font-weight: 500;
+        --tw-text-opacity: 1;
+        text-transform: capitalize;
+        letter-spacing: 0;
+        font-weight: 300;
+        border-radius: 3px;
+        padding: 2rem;
+        padding-left: auto;
+        padding-right: auto;
+        width: auto;
+        min-width: 100%;
+        text-align: center;
+        justify-self: stretch;
+        margin-bottom: 20px;
+      }
+      </style>
+      <nk-dropkit apikey="ma82gM5Q9ju426vY5hdU" mint-text="Purchase a Mint"  />
+
+      <div class="mb-2 text-neutral-400">Sale type</div> 
+      <div class="font-bold text-xl normal mb-4">Fixed price</div>
+
+      <div class="mb-2 text-neutral-400">Mint price</div> 
+      <div class="font-bold text-xl normal mb-4">0.15eth</div>
+  
+      <div class="mb-2 text-neutral-400">Mint date</div> 
+      <div class="font-bold text-xl normal mb-4">October 14</div>
+
+      <div class="mb-2 text-neutral-400">Supply</div> 
+      <div class="font-bold text-xl normal mb-4">500</div>
+
     </div>
+  </div>
 
 </div>
 
