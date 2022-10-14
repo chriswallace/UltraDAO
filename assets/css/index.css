@@ -12,7 +12,7 @@
   }
 
   h1 {
-    @apply font-light text-6xl pb-16 text-5xl md:text-6xl leading-tight;
+    @apply mb-4 pb-0 text-3xl md:text-6xl leading-loose font-light;
   }
 
   h2 {
@@ -37,7 +37,10 @@
   .button-alt{
     @apply inline-flex items-center no-underline justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200;
   }
-  
+}
+
+h1 {
+  @apply leading-tight;
 }
 
 .container{
@@ -160,7 +163,7 @@ nav{
   height: 100%;
 }
 
-.btn-gold-border {
+.btn-gold-border{
   background: 
     linear-gradient(#DEAE83, #A16B39) padding-box,
     linear-gradient(to right, #DEAE83, #A16B39) border-box;
