@@ -8,6 +8,7 @@
 </script>
 
 <script type="text/javascript" src="{{ site.github.url }}/assets/js/tween.js"></script>
+<script type="text/javascript" src="{{ site.github.url }}/assets/js/collectionDisplay.js"></script>
 <script src="{{ site.github.url }}/assets/js/scramble.js"></script>
 
 <script src="{{ site.github.url }}/assets/js/scrollTo.js"></script>

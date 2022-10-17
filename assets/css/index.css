@@ -79,6 +79,14 @@ nav{
   max-width: 125px;
 }
 
+.grid-item{
+  @apply mb-4;
+}
+
+.grid-item img{
+  @apply mb-2 rounded;
+}
+
 .prose{
   color: #a9a9a9;
 }
