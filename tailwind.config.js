@@ -6,6 +6,23 @@ module.exports = {
       fontFamily: {
         sans: ['Space Grotesk', 'sans-serif']
       },
+      fontSize: {
+        '2xl': ['1.5rem', {
+          lineHeight: '1.3',
+          letterSpacing: '-0.01em',
+          fontWeight: '300',
+        }],
+        '3xl': ['1.875rem', {
+          lineHeight: '1.4',
+          letterSpacing: '-0.02em',
+          fontWeight: '300',
+        }],
+        '4xl': ['2.2rem', {
+          lineHeight: '1.4',
+          letterSpacing: '-0.02em',
+          fontWeight: '300',
+        }],
+      },
       colors: {
         primary: {
           50: '#eef2ff',
