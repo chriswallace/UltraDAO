@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="shortcut icon" href="https://ultradao.org/assets/icon/logo.svg">
-  <title>{{ site.title }}</title>
+  {% seo title=true %}
 
   <link rel='preload' as='script' href='/assets/js/scramble.js'>
   <link rel='preload' as='script' href='/assets/js/collectionDisplay.js'>
