@@ -180,7 +180,7 @@ nav{
 }
 
 .new-tag{
-  @apply uppercase text-xs;
+  @apply uppercase text-xs text-red-600;
 }
 
 .gradient-filter-bg > .container{
