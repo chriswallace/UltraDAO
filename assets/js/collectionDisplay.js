@@ -48,18 +48,25 @@ if ("IntersectionObserver" in window) {
 
 CollectionDisplay = (function() {
 
+  var container = document.getElementById('collection-display');
+
+  console.log(container);
+
+  if( container ){
+
     test = hitApi("/isles.json", function(test, collection){
 
         collection.data.forEach(obj => {
-            //console.log(obj.data.name);
+
             htmlString =  `<div class="grid-item">`;
             htmlString += `<img src="/assets/images/curated-1-hero.jpg" data-src="https://media-cdn.deca.art/ethereum/0xA708AbaBBF9cB9707fF352CF954767b3B5E6a216/${obj.tokenId}/original.png?tx=w_420,c_limit" data-srcset="https://media-cdn.deca.art/ethereum/0xA708AbaBBF9cB9707fF352CF954767b3B5E6a216/${obj.tokenId}/original.png?tx=w_840,c_limit 2x, https://media-cdn.deca.art/ethereum/0xA708AbaBBF9cB9707fF352CF954767b3B5E6a216/${obj.tokenId}/original.png?tx=w_420,c_limit 1x" class="lazy" alt="">`;
-//            htmlString += `<h3>${obj.data.name}</h3>`;
+            htmlString += `<h3>#${obj.data.name}</h3>`;
             htmlString += `</div>`;
-
-            document.getElementById('collection-display').innerHTML += htmlString;
+            container.innerHTML += htmlString;
         });
 
     });
+
+  }
 
 })();
