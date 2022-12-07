@@ -44,7 +44,7 @@
           Curated
         </a>
         <a href="/twelve-days-of-cryptoart" class="block mt-4 no-underline lg:inline-block lg:mt-0 hover:text-white mr-4">
-          Twelve Days of CryptoArt
+          Twelve Days of CryptoArt <span class="new-tag">NEW</span>
         </a>
       </div>
       <div>

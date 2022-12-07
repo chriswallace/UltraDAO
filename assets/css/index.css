@@ -178,3 +178,52 @@ nav{
   border-radius: 5px;
   border: 4px solid transparent;
 }
+
+.new-tag{
+  @apply uppercase text-xs;
+}
+
+.gradient-filter-bg > .container{
+  position: relative;
+  z-index: 1;
+}
+
+.gradient-filter-bg .prose{
+  color: white;
+  opacity: 80;
+}
+
+.twelve-days-animation{
+  @apply grid content-center items-center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.overlay-filter{
+  background-image: url("/assets/images/bg-repeater.png");
+  background-repeat: repeat;
+  background-size: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  backdrop-filter: blur(16px);
+}
+
+.twelve-days-animation video{
+  width: 160%;
+  height: 160%;
+  max-width: 650%;
+  left: -30%;
+  top: -30%;
+  position: relative;
+  opacity: .88;
+}
