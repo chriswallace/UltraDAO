@@ -12,7 +12,7 @@
     "css:build": "npx tailwindcss -i ./assets/css/index.css -o ./assets/css/main.css --minify"
   },
   "devDependencies": {
-    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.5.4",
