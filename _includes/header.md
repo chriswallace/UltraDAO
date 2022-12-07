@@ -43,6 +43,9 @@
         <a href="/curated/1" class="block mt-4 no-underline lg:inline-block lg:mt-0 hover:text-white mr-4">
           Curated
         </a>
+        <a href="/twelve-days-of-cryptoart" class="block mt-4 no-underline lg:inline-block lg:mt-0 hover:text-white mr-4">
+          Twelve Days of CryptoArt
+        </a>
       </div>
       <div>
         <a href="https://discord.gg/ultradao" class="inline-block text-sm px-4 py-2 no-underline leading-none border rounded text-white border-white hover:border-transparent hover:text-indigo-800 hover:bg-white mt-4 lg:mt-0">Join Discord</a>
