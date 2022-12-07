@@ -57,12 +57,12 @@ h1 {
 }
 
 .home .hero{
-  top: -82px; position: relative; 
-  background-image: 
-    linear-gradient(to bottom, rgba(0,0,0, 0.9) 0%, rgba(117, 19, 93, 0) 50%),
-    url('https://www.woodiesnft.com/images/hero_bg.webp');
+  top: -82px; 
+  position: relative; 
   background-size: cover; 
-  background-position: 43% 100%; 
+  background-position: 43% 100%;
+  overflow: hidden;
+  z-index: 10;
 }
 
 .mjx-chtml {
@@ -127,7 +127,7 @@ nav{
 }
 
 .image-cover:after{
-  @apply rounded-lg bg-gradient-to-t from-black via-transparent opacity-60 sm:opacity-0;
+  @apply rounded-lg bg-gradient-to-t from-black via-transparent opacity-60;
   transition: all 200ms linear;
   content: "";
   position: absolute;
