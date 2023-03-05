@@ -14,7 +14,7 @@
       </ul>
     </div>
     <p class="leading-snug text-gray-600 text-xs text-center">
-      Copyright © 2022 UltraDAO Studios, LLC. All rights reserved.
+      Copyright © 2022 - 2023 UltraDAO Studios, LLC. All rights reserved.
     </p>
   </div>
 </footer>
