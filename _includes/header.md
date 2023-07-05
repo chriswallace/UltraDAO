@@ -40,7 +40,7 @@
         <a href="/ultrapass" class="block mt-4 no-underline lg:inline-block lg:mt-0 hover:text-white mr-4">
           ULTRAPASS&trade;
         </a>
-        <a href="/curated/1" class="block mt-4 no-underline lg:inline-block lg:mt-0 hover:text-white mr-4">
+        <a href="/curated/2" class="block mt-4 no-underline lg:inline-block lg:mt-0 hover:text-white mr-4">
           Curated
         </a>
         <a href="https://woodiesnft.com" class="block mt-4 no-underline lg:inline-block lg:mt-0 hover:text-white mr-4">
@@ -57,7 +57,6 @@
   </nav>
 
 </header>
-
 
 <script>
 	// Grab HTML Elements

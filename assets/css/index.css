@@ -4,8 +4,7 @@
 @tailwind utilities;
 
 @layer base {
-
-  body{
+  body {
     background-color: #040404;
     @apply text-white;
     line-height: 1.2;
@@ -22,7 +21,7 @@
   p,
   ul,
   ol,
-  dl{
+  dl {
     line-height: 1.5;
   }
 
@@ -30,11 +29,11 @@
     @apply text-white hover:text-white font-light underline hover:no-underline;
   }
 
-  .button{
+  .button {
     @apply hover:text-black hover:bg-white text-base no-underline font-medium rounded-md text-white hover:no-underline bg-indigo-600 px-6 py-4;
   }
 
-  .button-alt{
+  .button-alt {
     @apply inline-flex items-center no-underline justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200;
   }
 }
@@ -43,23 +42,23 @@ h1 {
   @apply leading-tight;
 }
 
-.container{
+.container {
   width: 1280px;
   max-width: calc(100% - 2rem);
 }
 
-.home .primary-nav{
+.home .primary-nav {
   @apply sticky top-0 z-50;
 }
 
-.home .primary-nav nav{
+.home .primary-nav nav {
   @apply container mx-auto;
 }
 
-.home .hero{
-  top: -82px; 
-  position: relative; 
-  background-size: cover; 
+.home .hero {
+  top: -82px;
+  position: relative;
+  background-size: cover;
   background-position: 43% 100%;
   overflow: hidden;
   z-index: 10;
@@ -69,64 +68,64 @@ h1 {
   font-size: 100% !important;
 }
 
-nav{
+nav {
   border-bottom: 2px solid white;
 }
 
-.logo *{
+.logo * {
   fill: white;
   width: 100%;
   max-width: 125px;
 }
 
-.grid-item{
+.grid-item {
   @apply mb-4;
 }
 
-.grid-item img{
+.grid-item img {
   @apply mb-2 rounded;
 }
 
-.prose{
+.prose {
   color: #a9a9a9;
 }
 
 .prose strong,
 .prose h1,
 .prose h2,
-.prose h3, 
+.prose h3,
 .prose h4,
 .prose h5,
-.prose h6{
+.prose h6 {
   color: white;
 }
 
-.typer{
+.typer {
   text-overflow: ellipsis;
 }
 
-.image-cover-container{
+.image-cover-container {
   @apply sm:flex gap-4 w-full;
 }
 
 .image-cover-container,
-.image-cover-container li{
+.image-cover-container li {
   @apply m-0 p-0;
   list-style: none;
 }
 
-.image-cover-container li{
+.image-cover-container li {
   @apply mb-4 md:mb-0 w-full;
 }
 
-.image-cover-container img{
+.image-cover-container img {
 }
 
-.image-cover{
+.image-cover {
   position: relative;
 }
 
-.image-cover:after{
+.image-cover:after {
   @apply rounded-lg bg-gradient-to-t from-black via-transparent opacity-60;
   transition: all 200ms linear;
   content: "";
@@ -138,7 +137,7 @@ nav{
   z-index: 1;
 }
 
-.image-cover .hide-lg{
+.image-cover .hide-lg {
   transition: all 200ms ease-in-out;
   position: absolute;
   bottom: 5px;
@@ -149,11 +148,11 @@ nav{
   font-size: 1rem;
 }
 
-.image-cover:hover:after{
+.image-cover:hover:after {
   opacity: 0.6;
 }
 
-.image-cover:hover .hide-lg{
+.image-cover:hover .hide-lg {
   display: block;
   bottom: 15px;
 }
@@ -171,29 +170,28 @@ nav{
   height: 100%;
 }
 
-.btn-gold-border{
-  background: 
-    linear-gradient(#DEAE83, #A16B39) padding-box,
-    linear-gradient(to right, #DEAE83, #A16B39) border-box;
+.btn-gold-border {
+  background: linear-gradient(#deae83, #a16b39) padding-box,
+    linear-gradient(to right, #deae83, #a16b39) border-box;
   border-radius: 5px;
   border: 4px solid transparent;
 }
 
-.new-tag{
+.new-tag {
   @apply uppercase text-xs text-red-600 font-medium;
 }
 
-.gradient-filter-bg > .container{
+.gradient-filter-bg > .container {
   position: relative;
   z-index: 1;
 }
 
-.gradient-filter-bg .prose{
+.gradient-filter-bg .prose {
   color: white;
   opacity: 80;
 }
 
-.twelve-days-animation{
+.twelve-days-animation {
   @apply grid content-center items-center;
   position: fixed;
   left: 0;
@@ -205,7 +203,7 @@ nav{
   overflow: hidden;
 }
 
-.overlay-filter{
+.overlay-filter {
   background-image: url("/assets/images/bg-repeater.png");
   background-repeat: repeat;
   background-size: 20px;
@@ -218,12 +216,30 @@ nav{
   backdrop-filter: blur(16px);
 }
 
-.twelve-days-animation video{
+.twelve-days-animation video {
   width: 160%;
   height: 160%;
   max-width: 650%;
   left: -30%;
   top: -30%;
   position: relative;
-  opacity: .88;
+  opacity: 0.88;
+}
+
+.momenta-preview-frame {
+  @apply flex justify-center items-center aspect-square lg:aspect-[9/6];
+  background-image: url("/assets/images/momenta-frame.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% auto;
+  background-color: #d6d6d5;
+}
+
+.momenta-preview-frame #momentaPreview {
+  @apply h-[420px] md:h-full flex items-center mb-16 md:mb-0;
+}
+
+.momenta-preview-frame canvas {
+  border: 6px solid black;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
