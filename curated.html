@@ -10,35 +10,34 @@ image: /assets/images/ultradao-cover.png
 <div class="lg:flex lg:items-center lg:justify-between pt-24 sm:pt-32 pb-16">
   <div class="flex-1 min-w-0">
     <h1 class="mb-8 md:mb-4 pb-0">Curated</h1>
-    <div class="flex flex-col sm:flex-row sm:flex-wrap">
-      <p
-        class="flex items-center font-light text-2xl text-neutral-400 mb-8 md:mb-0 max-w-2xl"
-      >
-        A series of digital art drops curated by UltraDAO ranging from
-        generative to photography, 2D/3D to AI.
-      </p>
-    </div>
   </div>
 </div>
 
-<picture>
-  <source
-    srcset="
-      /assets/images/curated-1-hero@2x.jpg 2x,
-      /assets/images/curated-1-hero.jpg
-    "
-    media="(min-width: 600px)"
-  />
-  <img
-    class="rounded-md"
-    srcset="
-      /assets/images/curated-1-hero@2x.jpg 2x,
-      /assets/images/curated-1-hero.jpg
-    "
-    src="/assets/images/curated-1-hero.jpg"
-    alt="UltraDAO"
-  />
-</picture>
+<div class="grid gap-4 md:gap-8 md:grid-cols-2">
+  <a href="/curated/1" class="card-zoom">
+    <div
+      class="card-zoom-image"
+      style="background-image: url('/assets/images/curated-1-hero.jpg')"
+    ></div>
+    <div class="card-zoom-text">
+      <span class="subtitle above">Series One</span>
+      <h2>Isles upon Deemed Rivers &amp; Other Wonders</h2>
+      <span class="subtitle below">Daïm Aggott-Hönsch</span>
+    </div>
+  </a>
+
+  <a href="/curated/2" class="card-zoom">
+    <div
+      class="card-zoom-image"
+      style="background-image: url('/assets/images/momenta-cover.jpg')"
+    ></div>
+    <div class="card-zoom-text">
+      <span class="subtitle above">Series Two</span>
+      <h2>Momenta</h2>
+      <span class="subtitle below">r0zk0</span>
+    </div>
+  </a>
+</div>
 
 <div id="join-ultradao">
   <div
