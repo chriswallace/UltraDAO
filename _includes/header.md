@@ -3,7 +3,7 @@
   <nav class="flex items-center justify-between flex-wrap py-6">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
       <a href="{{ site.github.url }}/" title="{{site.description}}">
-        <svg class="logo" width="160" viewBox="0 0 184 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="logo" width="120" viewBox="0 0 184 37" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_356_46)">
           <path d="M36.7661 18.5009C36.7661 28.7022 28.5191 37.0017 18.3839 37.0017C8.24702 37 0 28.7005 0 18.5009C0 8.29948 8.24702 0 18.3822 0C28.5191 0 36.7661 8.29948 36.7661 18.5009ZM2.30476 18.5009C2.30476 27.4224 9.51709 34.6823 18.3839 34.6806C27.249 34.6806 34.4631 27.4224 34.4614 18.4991C34.4614 9.57763 27.249 2.31772 18.3822 2.31772C9.5171 2.31772 2.30307 9.57593 2.30476 18.4991V18.5009Z"/>
           <path d="M32.0143 18.5008C32.0143 26.0658 25.8993 32.2197 18.3821 32.2197C10.865 32.2197 4.75 26.0658 4.75 18.5008C4.75 10.9359 10.865 4.78198 18.3821 4.78198C25.8993 4.78198 32.0143 10.9359 32.0143 18.5008ZM7.05646 18.5008C7.05646 24.7859 12.1384 29.9003 18.3838 29.9003C24.6292 29.9003 29.7112 24.7859 29.7112 18.5008C29.7112 12.2157 24.6292 7.10141 18.3838 7.10141C12.1384 7.10141 7.05646 12.2157 7.05646 18.5008Z"/>
@@ -51,7 +51,7 @@
         </a>
       </div>
       <div>
-        <a href="https://discord.gg/ultradao" class="inline-block text-sm px-4 py-2 no-underline leading-none border rounded text-white border-white hover:border-transparent hover:text-indigo-800 hover:bg-white mt-4 lg:mt-0">Join Discord</a>
+        <a href="https://discord.gg/ultradao" class="block sm:inline-block text-center sm:text-left text-sm px-4 py-2 no-underline leading-none border rounded text-white border-white hover:border-transparent hover:text-indigo-800 hover:bg-white mt-4 lg:mt-0">Join Discord</a>
       </div>
     </div>
   </nav>
