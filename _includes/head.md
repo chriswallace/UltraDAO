@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css?version=1.12" />
   <link rel="stylesheet" async href="{{ site.baseurl }}/assets/css/syntax.css" />
   {% seo title=false %}
 </head>
