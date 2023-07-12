@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<article class="w-full max-w-none py-8 pt-60">
+<article class="w-full max-w-none py-8 pt-16">
   <head>
-    <h1>
+    <h1 class="max-w-[66%]">
       {{ page.title | escape }}
     </h1>
     <time class="text-white text-sm">
@@ -20,5 +20,6 @@ layout: default
 
     {% endif %}
     <div class="mt-4">{{ content }}</div>
+
   </div>
 </article>

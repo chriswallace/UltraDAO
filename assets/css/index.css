@@ -251,7 +251,7 @@ nav {
   @apply mb-2 md:mb-6 text-[#222] text-4xl lg:text-5xl;
 }
 
-.momenta-preview-frame {
+.preview-frame {
   @apply flex justify-center items-center aspect-square lg:aspect-[12/8] mt-6 md:pb-8 rounded-md;
   background-image: url("/assets/images/momenta-frame.jpg");
   background-repeat: no-repeat;
@@ -260,11 +260,11 @@ nav {
   background-color: #cec4ba;
 }
 
-.momenta-preview-frame #momentaPreview {
+.preview-frame #momentaPreview {
   @apply h-[320px] sm:h-[420px] md:h-full flex items-center mb-16 md:mb-0;
 }
 
-.momenta-preview-frame canvas {
+.preview-frame canvas {
   border: 6px solid black;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
@@ -298,4 +298,20 @@ nav {
 
 .card-zoom-text h2 {
   @apply leading-tight block text-3xl;
+}
+
+.alba-logo {
+  @apply mt-4 mb-4 mx-auto max-w-[120px];
+}
+
+.alba-logo .st0 {
+  fill: white;
+}
+
+.art-preview-image {
+  @apply max-w-[200px] mx-6;
+}
+
+.preview-frame {
+  @apply overflow-x-hidden;
 }

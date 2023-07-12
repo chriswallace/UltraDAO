@@ -7,52 +7,53 @@ id: curated-3
 image: assets/images/isles-preview-og.png
 ---
 
-<div class="pt-24 sm:pt-20 pb-12 md:grid md:grid-cols-3 gap-8">
+<div class="pt-8 sm:pt-20 pb-12 md:grid md:grid-cols-3 gap-8">
   <div class="md:col-span-2">
     <span
-      class="inline-block mb-16 ddfont-400 text-sm md:text-md font-normal uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-gold-500"
+      class="inline-block mb-8 ddfont-400 text-sm md:text-md font-normal uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-gold-500"
       >Curated Series Three</span
     >
 
-    <h1>Interplay</h1>
+    <h1 class="mb-1">Interplay</h1>
 
-    <span
-      class="inline-block mb-12 caps text-xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-gold-500"
-      >Chris Wallace</span
-    >
-
+    <div class="byline text-xl mb-8">
+      <em class="text-stone-500">by</em>
+      <span
+        class="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-gold-500"
+        >Chris Wallace, GPT-4</span
+      >
+    </div>
     <p
       class="items-center font-light text-xl md:text-2xl text-neutral-400 mb-10 pb-0"
-    ></p>
+    >
+      Can AI and humans collaborate to create meaningful art? Interplay is an
+      on-chain generative artwork collaboration exploring this new reality.
+    </p>
 
-    <picture>
-      <source
-        srcset="
-          /assets/images/curated-1-hero@2x.jpg 2x,
-          /assets/images/curated-1-hero.jpg
-        "
-        media="(min-width: 600px)"
+    <div id="interplayPreview" class="preview-frame basis-1/2">
+      <img
+        src="/assets/images/interplay-2.jpg"
+        alt="Interplay Preview #1"
+        class="art-preview-image"
       />
       <img
-        class="rounded-md"
-        srcset="
-          /assets/images/curated-1-hero@2x.jpg 2x,
-          /assets/images/curated-1-hero.jpg
-        "
-        src="/assets/images/curated-1-hero.jpg"
-        alt="UltraDAO"
+        src="/assets/images/interplay-1.jpg"
+        alt="Interplay Preview #2"
+        class="art-preview-image"
       />
-    </picture>
+      <img
+        src="/assets/images/interplay-6.jpg"
+        alt="Interplay Preview #3"
+        class="art-preview-image"
+      />
+    </div>
 
     <div class="{{ page.markdown }} max-w-none leading-6 py-8">
       <div class="w-full max-w-none py-8 max-w-prose prose">
         <h2>About the collection</h2>
 
         <p>
-          "Interplay is a generative art project that explores the concept of
-          controlled chaos and balance through the harmonious interplay of
-          algorithmically generated shapes, colors, and patterns. By fusing the
-          unpredictability of complex mathematical equations with the
+          Fusing the unpredictability of complex mathematical equations with the
           intentionality of artistic expression, Interplay challenges the viewer
           to find order within the apparent disorder. This captivating visual
           journey aims to evoke a sense of unity between seemingly opposing
@@ -62,29 +63,78 @@ image: assets/images/isles-preview-og.png
 
         <p>
           This project is a glimpse into the future of human/AI collaboration.
-          Acting in a role akin to an art director, Wallace worked directly with
-          ChatGPT (GPT-4) to code the JavaScript and WebGL shaders used in
-          Interplay.
+          Acting in a role akin to an art director, the artist worked directly
+          with ChatGPT (GPT-4) to create the JavaScript code and WebGL shaders
+          used in Interplay.
         </p>
 
         <p>
-          Interplay also utilizes fxparams, a feature of fxhash that allows
-          collectors to participate in curating and minting their own outputs.
-          Within the metadata, minters will receive credit as a parametric
-          artist and receive future royalties.
+          All the shapes and lines drawn on canvas are solid. All outlines are
+          created using dots of various sizes, mimicking the effect of a pen
+          stroke. The color palettes are inspired by artists who came before,
+          including Tyler Hobbs, Studio Yorktown, Emily Xie, Grant Yun,
+          Omentejovum, among others.
         </p>
       </div>
     </div>
   </div>
 
   <div>
-    <div class="p-10 border border-2 border-neutral-700 rounded-md text-center">
-      <h2 class="text-center">Mint details</h2>
+    <div class="p-10 border border-2 border-neutral-700 rounded-md">
+      <h2>Mint details</h2>
 
-      <p class="mb-6">
-        Available April 27th on fxhash. The mint will be conducted via dutch
-        auction over a one-hour period, starting at 200tz, reducing 20tz every 5
-        minutes until it reaches a resting price of 60tz.
+      <p class="mb-2 font-light">Editions: 400</p>
+      <p class="mb-2 font-light">Sale type: Dutch auction</p>
+      <p class="mb-2 font-light">Date/time: July 27 @ 11am CST</p>
+      <p class="mb-2 font-light">
+        Reserves: Available for
+        <a href="https://ultradao.org/ultrapass">ULTRAPASS</a> and existing
+        Chris Wallace holders.
+      </p>
+      <p
+        class="text-center mt-12 font-light text-sm uppercase text-stone-400 tracking-widest"
+      >
+        on-chain partner
+        <a href="https://alba.art"
+          ><svg
+            version="1.1"
+            id="alba"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 60 16"
+            style="enable-background: new 0 0 60 16"
+            xml:space="preserve"
+            class="alba-logo"
+          >
+            <path
+              class="st0"
+              d="M29,10.8V16H16.8v-0.4c1.1-0.1,1.7-0.7,1.7-1.8V2.2c0-1.1-0.6-1.7-1.7-1.8V0H23v0.4c-1.1,0.1-1.7,0.7-1.7,1.8
+	v11.7c0,0.5,0.1,0.9,0.4,1.2c0.3,0.3,0.8,0.4,1.5,0.4h1.2c0.5,0,1-0.1,1.3-0.3c0.4-0.2,0.8-0.6,1.2-1.3c0.5-0.7,1-1.7,1.7-3.1H29z"
+            />
+            <path
+              class="st0"
+              d="M32.7,13.8V2.2c0-1.1-0.6-1.7-1.7-1.8V0h7.9c1.4,0,2.5,0.3,3.3,1c0.7,0.7,1.1,1.5,1.1,2.6
+	c0,0.9-0.3,1.8-0.9,2.5C41.8,6.7,41,7.2,40,7.4C41.3,7.5,42.3,8,43,8.8c0.7,0.8,1.1,1.7,1.1,2.9c0,1.3-0.4,2.4-1.2,3.2
+	C42.2,15.6,41,16,39.4,16H31v-0.4C32.1,15.5,32.7,14.9,32.7,13.8z M35.9,15.1c0.3,0.3,0.8,0.4,1.4,0.4h1.2c0.9,0,1.6-0.3,2-0.9
+	c0.5-0.6,0.7-1.6,0.7-3c0-2.6-0.9-3.9-2.8-3.9h-3v6.1C35.4,14.4,35.6,14.8,35.9,15.1z M38.2,7.2c1.5,0,2.3-1.1,2.3-3.3
+	c0-1.2-0.2-2.1-0.7-2.6c-0.4-0.5-1.1-0.8-1.9-0.8h-1.4c-0.5,0-0.7,0.1-0.9,0.2c-0.2,0.2-0.2,0.4-0.2,0.8v5.6H38.2z"
+            />
+            <path
+              class="st0"
+              d="M1.4,14.4c0.5-0.6,0.9-1.6,1.4-2.9L6.4,0h2.1l4.3,13c0.3,0.9,0.6,1.6,1,2c0.3,0.4,0.7,0.6,1.2,0.7V16H8.9v-0.4
+	c0.6,0,1-0.2,1.3-0.3c0.2-0.2,0.4-0.4,0.4-0.8c0-0.2-0.1-0.6-0.2-1.1L9.1,9.7L6.4,1.8L3.9,9.7L3.2,12c-0.2,0.5-0.3,1-0.3,1.4
+	c0,0.5,0.1,0.9,0.5,1.2c0.3,0.4,0.8,0.7,1.6,1V16H0v-0.4C0.4,15.5,0.9,15.1,1.4,14.4z"
+            />
+            <path
+              class="st0"
+              d="M46.2,14.4c0.5-0.6,0.9-1.6,1.4-2.9L51.3,0h2.1l4.3,13c0.3,0.9,0.6,1.6,1,2c0.3,0.4,0.7,0.6,1.2,0.7V16h-6.2
+	v-0.4c0.6,0,1-0.2,1.3-0.3c0.2-0.2,0.4-0.4,0.4-0.8c0-0.2-0.1-0.6-0.2-1.1l-1.3-3.8l-2.6-7.9l-2.5,7.9L48,12c-0.2,0.5-0.3,1-0.3,1.4
+	c0,0.5,0.1,0.9,0.5,1.2c0.3,0.4,0.8,0.7,1.6,1V16h-4.9v-0.4C45.3,15.5,45.7,15.1,46.2,14.4z"
+            />
+          </svg>
+        </a>
       </p>
     </div>
   </div>
@@ -94,66 +144,15 @@ image: assets/images/isles-preview-og.png
   class="grid md:grid-cols-3 gap-4 md:gap-12 max-w-full content-around justify-items-center items-center place-content-center -mx-2 overflow-hidden sm:-mx-2"
 >
   <div>
-    <picture>
-      <source
-        srcset="
-          /assets/images/curated-1-preview-2@2x.png 2x,
-          /assets/images/curated-1-preview-2.png
-        "
-        media="(min-width: 600px)"
-      />
-      <img
-        class="rounded-md"
-        srcset="
-          /assets/images/curated-1-preview-2@2x.png 2x,
-          /assets/images/curated-1-preview-2.png
-        "
-        src="/assets/images/curated-1-preview-2.png"
-        alt="UltraDAO"
-      />
-    </picture>
+    <img src="/assets/images/interplay-4.jpg" alt="UltraDAO" />
   </div>
 
   <div>
-    <picture>
-      <source
-        srcset="
-          /assets/images/curated-1-preview-4@2x.png 2x,
-          /assets/images/curated-1-preview-4.png
-        "
-        media="(min-width: 600px)"
-      />
-      <img
-        class="rounded-md"
-        srcset="
-          /assets/images/curated-1-preview-4@2x.png 2x,
-          /assets/images/curated-1-preview-4.png
-        "
-        src="/assets/images/curated-1-preview-4.png"
-        alt="UltraDAO"
-      />
-    </picture>
+    <img src="/assets/images/interplay-3.jpg" alt="UltraDAO" />
   </div>
 
   <div>
-    <picture>
-      <source
-        srcset="
-          /assets/images/curated-1-preview-3@2x.png 2x,
-          /assets/images/curated-1-preview-3.png
-        "
-        media="(min-width: 600px)"
-      />
-      <img
-        class="rounded-md"
-        srcset="
-          /assets/images/curated-1-preview-3@2x.png 2x,
-          /assets/images/curated-1-preview-3.png
-        "
-        src="/assets/images/curated-1-preview-3.png"
-        alt="UltraDAO"
-      />
-    </picture>
+    <img src="/assets/images/interplay-5.jpg" alt="UltraDAO" />
   </div>
 </div>
 
@@ -166,7 +165,7 @@ image: assets/images/isles-preview-og.png
     <h2 class="mt-0 pt-0">Chris Wallace</h2>
 
     <img
-      src="/assets/images/daim-photo.png"
+      src="/assets/images/chris-wallace-photo.jpg"
       class="float-left mr-6 mb-4 rounded-md max-w-[25%]"
       width="180"
       alt="Chris Wallace"
@@ -186,8 +185,7 @@ image: assets/images/isles-preview-og.png
       he led a star-studded lineup of artists and builders in releasing Woodies,
       a 10k profile picture (PFP) collection in September 2021, and the Twelve
       Days of CryptoArt. His art often delves into minimalistic concepts and 3D
-      studies, reflecting his innovative approach to integrating technology into
-      his artistic methods.
+      studies, reflecting his love for nostalgia and clean aesthetics.
     </p>
 
     <p>
@@ -200,8 +198,6 @@ image: assets/images/isles-preview-og.png
     </p>
   </div>
 </div>
-
-<div id="collection-display" class="grid grid-cols-3 gap-8"></div>
 
 <style type="text/css">
   .btn-go > span {
