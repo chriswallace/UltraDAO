@@ -54,25 +54,30 @@ image: /assets/images/ultradao-cover.png
   src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"
 ></script>
 
+<script
+  language="javascript"
+  type="text/javascript"
+  src="http://www.alba.art/js/alba.min.js"
+></script>
+
 <script>
-  p5.disableFriendlyErrors = true;
+  let albaSeed,
+    prng,
+    tokenNum,
+    ww,
+    wh,
+    w,
+    h,
+    aspectRatio,
+    firstLoop = true;
 
-  function genTokenData(projectNum) {
-    let data = {};
-    let hash = "0x";
-    for (var i = 0; i < 64; i++) {
-      hash += Math.floor(Math.random() * 16).toString(16);
-    }
-    data.hash = hash;
-    data.tokenId = (
-      projectNum * 1000000 +
-      Math.floor(Math.random() * 208)
-    ).toString();
-    return data;
-  }
-  let tokenData = genTokenData(123);
+  albaSeed = window.alba.params.seed || window.alba._testSeed();
+  tokenNum = window.alba.params.tokenId;
 
-  // tokenData.hash = '0xfd0cd766df001660989c3e04a2900bbfe6bbff26f431520b6e849303dfd3ceaa'
+  tokenNum = 0;
+
+  //   albaSeed = '0xfbad950b365b9b6dfa4427af733a143e7e5c1aece0a9060344bf5016956b1ee5'; // copy and paste a seed from the console here and commment this line back in temporarily to test that the output is the same every time you refresh; also helpful for when you're troubleshooting
+  console.log("Alba Seed: " + albaSeed);
 
   class Random {
     constructor() {
@@ -96,10 +101,10 @@ image: /assets/images/ultradao-cover.png
           return (t >>> 0) / 4294967296;
         };
       };
-      // seed prngA with first half of tokenData.hash
-      this.prngA = new sfc32(tokenData.hash.substr(2, 32));
-      // seed prngB with second half of tokenData.hash
-      this.prngB = new sfc32(tokenData.hash.substr(34, 32));
+      // seed prngA with first half of albaSeed
+      this.prngA = new sfc32(albaSeed.substr(2, 32));
+      // seed prngB with second half of albaSeed
+      this.prngB = new sfc32(albaSeed.substr(34, 32));
       for (let i = 0; i < 1e6; i += 2) {
         this.prngA();
         this.prngB();
@@ -129,7 +134,7 @@ image: /assets/images/ultradao-cover.png
     }
   }
 
-  const Seed = tokenData.hash;
+  const Seed = albaSeed;
   let rnd = new Random();
   const screenMode =
     document.getElementById("momentaPreview").clientWidth <=
@@ -149,7 +154,7 @@ image: /assets/images/ultradao-cover.png
     document.getElementById("momentaPreview").clientHeight * ratio
   );
   const WIDTH = Math.floor(high / 1.5);
-  const HEIGHT = Math.floor(WIDTH * 1.41);
+  const HEIGHT = Math.floor(WIDTH * 1.5);
   const DIM = Math.min(WIDTH, high);
   const M = DIM / DEFAULT_SIZE;
 
@@ -182,6 +187,7 @@ image: /assets/images/ultradao-cover.png
   let density = rnd.random_dec();
   let glitch = rnd.random_dec();
   let colorful = rnd.random_dec();
+  let blackstroke = rnd.random_dec();
   let midnight = 0;
   let noon = 0;
   let sunrise = 0;
@@ -191,6 +197,7 @@ image: /assets/images/ultradao-cover.png
   let rndPix;
 
   let poster = 1;
+  let title = 1;
 
   var padding = -200 * M;
   var padding2 = -500 * M;
@@ -222,32 +229,33 @@ image: /assets/images/ultradao-cover.png
   let color_setup = [];
   let backgrounds = [];
   let bgcol = [];
+  let colPicker;
+  let bgPicker;
 
-  color_setup[0] = "FCDE9C-FFA552-BA5624-381D2A-C4D6B0"
+  color_setup[0] = "0A2239-53A2BE-1D84B5-132E32-176087"
     .split("-")
     .map((a) => "#" + a);
-  color_setup[1] = "f8f9fbBF-f9f6e040-45454cBF-ef9643b3-f0654380"
+  color_setup[1] = "2F2504-594E36-7E846B-A5AE9E-D0DDD7"
     .split("-")
     .map((a) => "#" + a);
-  color_setup[2] = "f8f9fb-f9f6e0-45454c-ef9643-f06543"
+  color_setup[2] = "1C3144-D00000-FFBA08-A2AEBB-3F88C5"
     .split("-")
     .map((a) => "#" + a);
   //color_setup[3] = "fefefe-fffffb-fafdff-fef9fb-f7fcfe".split("-").map((a) => "#" + a);
-  color_setup[3] = "084C61-DB504A-E3B505-4F6D7A-56A3A6"
+  color_setup[3] = "F7F052-F28123-D34E24-563F1B-38726C"
     .split("-")
     .map((a) => "#" + a);
 
-  color_setup[4] =
-    "8c75ff-c553d2-2788f5-23054f-f21252-8834f1-c4dd92-184fd3-f9fee2-2E294E-541388-F1E9DA-FFD400-D90368-e9baaa-ffa07a-164555-ffe1d0-acd9e7-4596c7-6d8370-e45240-21d3a4-3303f9-cd2220-173df6-244ca8-a00360-b31016"
-      .split("-")
-      .map((a) => "#" + a);
-  color_setup[5] = "025159-3E848C-7AB8BF-C4EEF2-A67458"
+  color_setup[4] = "001427-708D81-F4D58D-BF0603-8D0801"
     .split("-")
     .map((a) => "#" + a);
-  color_setup[6] = "10454F-506266-818274-A3AB78-BDE038"
+  color_setup[5] = "220901-621708-941B0C-BC3908-F6AA1C"
     .split("-")
     .map((a) => "#" + a);
-  color_setup[7] = "D96690-F28DB2-F2C9E0-89C2D9-88E8F2"
+  color_setup[6] = "04006A-15308C-2760AE-388FCF-49BFF1"
+    .split("-")
+    .map((a) => "#" + a);
+  color_setup[7] = "EECF6D-D5AC4E-8B6220-720E07-45050C"
     .split("-")
     .map((a) => "#" + a);
   //color_setup[8] = "3D3522-4A442D-202020-58B09C-CAF7E2".split("-").map((a) => "#" + a);
@@ -273,6 +281,8 @@ image: /assets/images/ultradao-cover.png
 
   var color_setup1, color_setup2;
 
+  let strips = 50;
+
   let color_bg;
 
   let newSeed = Date.now();
@@ -289,8 +299,12 @@ image: /assets/images/ultradao-cover.png
     noiseStrength = 0.3;
 
   function setup() {
-    randomSeed(rndSeed);
-    console.log(Seed);
+    if (window.alba.params.width) {
+      ww = window.alba.params.width;
+    } else {
+      ww = window.innerWidth;
+    }
+
     rndPix = 14 * M;
     mintnumber = rnd.random_int(0, 300);
     if (mintnumber < 10) {
@@ -327,12 +341,12 @@ image: /assets/images/ultradao-cover.png
     colorMode(HSB, 360, 100, 100, 100);
     r = mySize / 2;
 
-    if (density < 0 && monochrome > 0.9 && elliptical > 0.8) {
+    if (density < 0 && monochrome > 0.97 && elliptical > 0.8) {
       cols = rnd.random_int(500, 900); //DEFAULT 180
     } else if (density < 0.6 && elliptical <= 0.8) {
-      cols = rnd.random_int(20, 45); //DEFAULT 180 // CHECK used to be 35,80
+      cols = rnd.random_int(30, 60); //DEFAULT 180 // CHECK used to be 35,80
     } else {
-      cols = rnd.random_int(40, 65); // cols = rnd.random_int(70,160) //DEFAULT 180
+      cols = rnd.random_int(60, 100); // cols = rnd.random_int(70,160) //DEFAULT 180
     }
     if (slices < 9) {
       cols = rnd.random_int(40, 80);
@@ -341,11 +355,11 @@ image: /assets/images/ultradao-cover.png
     console.log("cols: ", cols);
 
     colWidth = (width - 2 * padding) / cols;
-    let bgPicker;
+
     if (slices < 9) {
       bgPicker = rnd.random_int(0, 4);
     } else {
-      bgPicker = rnd.random_int(4, 7);
+      bgPicker = rnd.random_int(5, 7);
     }
 
     backgrounds[0] = [10, 80, 40];
@@ -353,8 +367,8 @@ image: /assets/images/ultradao-cover.png
     backgrounds[2] = [60, 2, 30];
     backgrounds[3] = [234, 86, 27];
     backgrounds[4] = [0, 0, 95];
-    backgrounds[5] = [200, 14, 90];
-    backgrounds[6] = [41, 15, 97];
+    backgrounds[5] = [200, 50, 40];
+    backgrounds[6] = [41, 15, 75];
     backgrounds[7] = [0, 0, 95];
 
     bgcol = backgrounds[bgPicker];
@@ -372,20 +386,32 @@ image: /assets/images/ultradao-cover.png
     console.log(bgcol[2]);
 
     //   color_setup1 = colors7;
-    let colPicker = rnd.random_int(0, 13);
+    colPicker = rnd.random_int(0, 13);
 
     color_setup2 = color_setup[colPicker];
+    // color_setup2 = color_setup[6]
 
     colors[0] = rnd.random_choice(color_setup2); //rnd.random_choice(colors7);
 
     colors[1] = rnd.random_choice(color_setup2);
-    if (colorful > 0.5 || slices < 9) {
+    if (colorful > 0 || slices < 9) {
+      ///0.5
       colors[2] = rnd.random_choice(color_setup2);
       colors[3] = rnd.random_choice(color_setup2);
     }
     if (slices < 9) {
       colors[4] = rnd.random_choice(color_setup2);
     }
+
+    // colors[0] = color_setup2[0]
+    // colors[1] = color_setup2[1];
+    // if(colorful > 0 || slices < 9){ ///0.5
+    // colors[2] = color_setup2[2]
+    // colors[3] = color_setup2[3]
+    // }
+    // if(slices < 9){
+    // colors[4] = color_setup2[4]
+    // }
 
     console.log("colors: ", colors);
     // background(color_bg);
@@ -404,7 +430,7 @@ image: /assets/images/ultradao-cover.png
       );
       let angle = 180; //any value to initialize
       let dir = createVector(cos(angle), sin(angle));
-      let speed = rnd.random_num(0.07, 0.33); // default: 0.9
+      let speed = rnd.random_num(0.12, 0.43); //rnd.random_num(0.07,0.33); // default: 0.9
 
       if (regular > 0) {
         drops[i] = new Drop(loc, dir, speed, strokeCol);
@@ -415,7 +441,7 @@ image: /assets/images/ultradao-cover.png
     radius = mySize * 1;
     for (let a = 0; a < TAU; a += TAU / num) {
       // sizes.push(random(0.1, 0.5))
-      sizes.push(rnd.random_num(0.01, 0.5));
+      sizes.push(rnd.random_num(0.01, 0.25));
     }
     t = 0;
 
@@ -423,7 +449,200 @@ image: /assets/images/ultradao-cover.png
     mask = createMask(shape.a, shape.o);
 
     background(0, 0, 0);
+
+    // res(0)
+
     filters();
+  }
+
+  // function res(r){
+  //     if(r == 0){
+  //         pixelDensity(1)
+  //         // graph.pixelDensity(1)
+  //     }else{
+  //         pixelDensity(5)
+  //         // graph.pixelDensity(2)
+  //     }
+  //     filters()
+  // }
+
+  function filters() {
+    let filter = new makeFilter();
+    let filter2 = new makeFilter2();
+    draw();
+  }
+
+  function draw() {
+    if (firstLoop) {
+      assignFeatures(); // Comment back in after you've added your own value/name pairs for your project's metadata below
+      window.alba.setComplete(true); // call when you're done drawing the piece and are ready for the screencapture
+      firstLoop = false;
+    }
+
+    /////////////////////////////////////
+
+    let today = new Date();
+    minutesNow = today.getHours() * 60 + today.getMinutes();
+
+    if (minutesNow % 30000 == 0) {
+      filters();
+    }
+
+    randomSeed(rndSeed);
+
+    let ccc = color(bgcol[0], bgcol[1], bgcol[2]);
+    if (slices < 9) {
+      ccc.setAlpha(20);
+    } else {
+      ccc.setAlpha(100);
+    }
+
+    // background(0,0,100)
+    background(ccc);
+    graph.background(ccc);
+    if (monochrome <= 0.97) {
+      graph.background(ccc);
+    }
+    //   }
+
+    noFill();
+    graph.strokeCap(ROUND);
+
+    push();
+    stroke(0, 0, 100, 30);
+    strokeWeight(0.5 * M);
+    pop();
+
+    graph.push();
+
+    for (let i = 0; i < cols; i += 1) {
+      noStroke();
+      drops[i].move();
+    }
+    graph.pop();
+
+    t += rnd.random_num(-0.0012, 0.0012);
+
+    th += seg;
+
+    graph.image(overAllTexture2, 0, 0);
+
+    runs += 1;
+    mirror();
+
+    bubbles(15, 0.05, 0.7);
+
+    if (slices < 9) {
+      monochrome = 0;
+    }
+
+    //   if(monochrome > 0.9){
+
+    //     }else if(monochrome >0.4){
+    //         if(poster == 1){
+    //         //graph.filter(POSTERIZE, 9   )
+    //         }
+
+    //     }
+    //
+    //
+    if (poster == 1) {
+      if (slices < 9) {
+        graph.filter(POSTERIZE, 12);
+      } else {
+        graph.filter(POSTERIZE, 6);
+      }
+
+      //graph.filter(THRESHOLD, 0.55)
+      if (monochrome > 0.97) {
+        graph.filter(GRAY);
+      }
+    }
+
+    if (clear > 0.5 && inverse < 0.4) {
+      // graph.image(overAllTexture2, 0, 0);
+    }
+
+    if (slices < 9) {
+      image(graph, 0, 0);
+    } else if (inverse < 0.4) {
+      image(graph, 0, -HEIGHT / 2 + 1 * M);
+      image(graph, 0, HEIGHT / 2);
+    } else if (inverse < 0.8 && slices % 4 == 0) {
+      image(graph, -width / 2 + 1 * M, 0);
+      image(graph, width / 2, 0);
+    } else {
+      image(graph, -width / 2 + 1 * M, -HEIGHT / 2 + 1 * M);
+      image(graph, width / 2, -HEIGHT / 2 + 1 * M);
+      image(graph, -width / 2 + 1 * M, HEIGHT / 2);
+      image(graph, width / 2, HEIGHT / 2);
+    }
+
+    if (inverse >= 0.4) {
+      if (clear > 0.4) {
+        image(overAllTexture, 0, 0);
+      }
+      // if(clear > 0.7 && monochrome <=0.9){
+      //     image(overAllTexture, 0, 0);
+      // }
+    }
+
+    if (glitch > 0) {
+      // granulateFuzzify(200)
+    }
+    //
+
+    stroke(0, 0, 0);
+    noFill();
+    strokeWeight(100 * M);
+    //   rect(0,0,width,HEIGHT)
+    fill(0, 0, 0);
+    //rect(0,high-50*M,width,300*M)
+
+    fill(bgcol);
+    if (bgcol[2] == 95) {
+      fill(0, 0, 20);
+
+      drawGlitch();
+    }
+
+    const event = new Date(Date.now());
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    let thisDate = event.toLocaleDateString("en-EN", options);
+
+    if (title == 1) {
+      noStroke();
+      textSize(75 * M);
+      fill(0, 0, 100);
+      textAlign(LEFT, BOTTOM);
+      textFont("Helvetica");
+      textStyle(BOLD);
+      // text('M O ', 50*M,HEIGHT-230*M);
+      // text('M E N', 50*M,HEIGHT-140*M);
+      // text('T A', 50*M,HEIGHT-50*M);
+
+      textAlign(LEFT, TOP);
+      text("M O ", 50 * M, 50 * M);
+      text("M E N", 50 * M, 140 * M);
+      text("T A", 50 * M, 230 * M);
+      textAlign(RIGHT, BOTTOM);
+      text("# " + tokenNum, width - 50 * M, HEIGHT - 50 * M);
+      // text('M O M E N T A', 50*M,HEIGHT-50*M);
+      textSize(20 * M);
+      textAlign(RIGHT, BOTTOM);
+      textStyle(ITALIC);
+      // text('MINT NUMBER', width-50*M,HEIGHT-50*M);
+      textStyle(BOLDITALIC);
+      text(mintnumber, width - 50 * M, HEIGHT + 60 * M);
+    }
+  }
+
+  ////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////
+
+  function assignFeatures() {
+    // You will need to fill out this section for your specific features
+    // The name of the feature on the left in quotes, then a colon, then the name of the variable you want to use
 
     ///FEATURES
 
@@ -488,20 +707,20 @@ image: /assets/images/ultradao-cover.png
       if (clear > 0.4) {
         haze_f = "Medium";
       }
-      if (clear > 0.7 && monochrome <= 0.9) {
+      if (clear > 0.7 && monochrome <= 0.97) {
         haze_f = "High";
       }
     }
 
     //MONOCHROME: yes, no
 
-    if (monochrome > 0.9) {
+    if (monochrome > 0.97) {
       mono_f = "Yes";
     } else {
       mono_f = "No";
     }
 
-    let features = {
+    window.alba.setMetadata({
       Palette: palette_f,
       Background: background_f,
       Segments: segments_f,
@@ -509,156 +728,9 @@ image: /assets/images/ultradao-cover.png
       Symmetry: symmetry_f,
       Haze: haze_f,
       Monochrome: mono_f,
-    };
+    });
 
-    console.log(features);
-  }
-
-  function filters() {
-    let filter = new makeFilter();
-    let filter2 = new makeFilter2();
-    draw();
-  }
-
-  function draw() {
-    let today = new Date();
-    minutesNow = today.getHours() * 60 + today.getMinutes();
-
-    if (minutesNow % 30000 == 0) {
-      filters();
-    }
-
-    randomSeed(rndSeed);
-
-    let ccc = color(bgcol[0], bgcol[1], bgcol[2]);
-    if (slices < 9) {
-      ccc.setAlpha(20);
-    } else {
-      ccc.setAlpha(100);
-    }
-
-    background(0, 0, 100);
-    graph.background(ccc);
-    if (monochrome <= 0.9) {
-      graph.background(ccc);
-    }
-    //   }
-
-    noFill();
-    graph.strokeCap(ROUND);
-
-    push();
-    stroke(0, 0, 100, 30);
-    strokeWeight(0.5 * M);
-    pop();
-
-    graph.push();
-
-    for (let i = 0; i < cols; i += 1) {
-      noStroke();
-      drops[i].move();
-    }
-    graph.pop();
-
-    t += rnd.random_num(-0.0012, 0.0012);
-
-    th += seg;
-
-    graph.image(overAllTexture2, 0, 0);
-
-    runs += 1;
-    mirror();
-
-    bubbles(15, 0.05, 0.7);
-
-    if (slices < 9) {
-      monochrome = 0;
-    }
-
-    //   if(monochrome > 0.9){
-
-    //     }else if(monochrome >0.4){
-    //         if(poster == 1){
-    //         //graph.filter(POSTERIZE, 9   )
-    //         }
-
-    //     }
-    //
-    //
-    if (poster == 1) {
-      if (slices < 9) {
-        graph.filter(POSTERIZE, 9);
-      } else {
-        graph.filter(POSTERIZE, 9);
-      }
-
-      //graph.filter(THRESHOLD, 0.55)
-      if (monochrome > 0.9) {
-        graph.filter(GRAY);
-      }
-    }
-
-    if (clear > 0.5 && inverse < 0.4) {
-      // graph.image(overAllTexture2, 0, 0);
-    }
-
-    if (slices < 9) {
-      image(graph, 0, 0);
-    } else if (inverse < 0.4) {
-      image(graph, 0, -HEIGHT / 2 + 1 * M);
-      image(graph, 0, HEIGHT / 2);
-    } else if (inverse < 0.8 && slices % 4 == 0) {
-      image(graph, -width / 2 + 1 * M, 0);
-      image(graph, width / 2, 0);
-    } else {
-      image(graph, -width / 2 + 1 * M, -HEIGHT / 2 + 1 * M);
-      image(graph, width / 2, -HEIGHT / 2 + 1 * M);
-      image(graph, -width / 2 + 1 * M, HEIGHT / 2);
-      image(graph, width / 2, HEIGHT / 2);
-    }
-
-    if (inverse >= 0.4) {
-      if (clear > 0.4) {
-        image(overAllTexture, 0, 0);
-      }
-      // if(clear > 0.7 && monochrome <=0.9){
-      //     image(overAllTexture, 0, 0);
-      // }
-    }
-
-    if (glitch > 0) {
-      // granulateFuzzify(200)
-    }
-    //
-
-    stroke(0, 0, 100);
-    noFill();
-    strokeWeight(100 * M);
-    rect(0, 0, width, HEIGHT);
-    fill(0, 0, 100);
-    rect(0, high - 50 * M, width, 300 * M);
-
-    fill(bgcol);
-    if (bgcol[2] == 95) {
-      fill(0, 0, 20);
-    }
-
-    const event = new Date(Date.now());
-    const options = { year: "numeric", month: "long", day: "numeric" };
-    let thisDate = event.toLocaleDateString("en-EN", options);
-
-    noStroke();
-    textSize(75 * M);
-    textAlign(LEFT, BOTTOM);
-    textFont("Helvetica");
-    textStyle(BOLD);
-    text("M O M E N T A", 48 * M, HEIGHT + 75 * M);
-    textSize(20 * M);
-    textAlign(RIGHT, BOTTOM);
-    textStyle(ITALIC);
-    text("MINT NUMBER", width - 50 * M, HEIGHT + 35 * M);
-    textStyle(BOLDITALIC);
-    text(mintnumber, width - 50 * M, HEIGHT + 60 * M);
+    console - log(palette_f);
   }
 
   class Drop {
@@ -731,10 +803,14 @@ image: /assets/images/ultradao-cover.png
       //     cc = color(cc[0], cc[1], 100)
       // }
 
-      if (style > 1 && solid >= 0.4 && elliptical <= 0.8) {
-        graph.stroke(color(bgcol[0], bgcol[1], bgcol[2], 40));
+      if (style > 0.35 && solid >= 0.4 && elliptical <= 0.8) {
+        if (blackstroke > 0.5) {
+          graph.stroke(color(bgcol[0], 0, 0, 20));
+        } else {
+          graph.stroke(color(bgcol[0], bgcol[1], bgcol[2], 20));
+        }
 
-        graph.strokeWeight(60 * M);
+        graph.strokeWeight(45 * M);
         cc.setAlpha(random(25, 90));
       }
       graph.fill(cc);
@@ -746,13 +822,13 @@ image: /assets/images/ultradao-cover.png
       let h3 = colWidth * random(5, 15);
 
       if (regular > 0) {
-        if (elliptical > 0 && slices > 8) {
+        if (elliptical > 0.2 && slices > 8) {
           graph.ellipse(this.loc.x, this.loc.y, w1, h1);
         } else {
           graph.rect(this.loc.x, this.loc.y, w1, h1);
         }
         if (solid < 0.5) {
-          if (elliptical > 0 && slices > 8) {
+          if (elliptical > 0.2 && slices > 8) {
             graph.ellipse(this.loc.x, this.loc.y, w2, h2);
             graph.ellipse(this.loc.x, this.loc.y, w3, h3);
             graph.ellipse(this.loc.x, this.loc.y, w2, h2);
@@ -947,55 +1023,36 @@ image: /assets/images/ultradao-cover.png
   }
 
   function keyTyped() {
-    if (key === "l" || key === "L") {
+    if (key === "s" || key === "S") {
       saveCanvas(Seed, "png");
     }
     if (key === "f" || key === "F") {
       noLoop();
     }
     if (key === "p" || key === "P") {
+      loop();
+      // res(0)
       pixelDensity(1);
-      loop();
     }
-    if (key === "n" || key === "N") {
-      midnight = 1;
-      noon = 0;
-      sunrise = 0;
-      filters();
-      loop();
-    }
-    if (key === "d" || key === "D") {
-      noLoop();
-      noon = 1;
-      midnight = 0;
-      sunrise = 0;
-      filters();
-      loop();
-    }
-    if (key === "s" || key === "S") {
-      noLoop();
-      sunrise = 1; // saveCanvas(Seed, "png");
-      midnight = 0;
-      noon = 0;
-      filters();
-      loop();
-      console.log("sunrise");
-    }
-    if (key === "r" || key === "R") {
-      midnight = 0;
-      noon = 0; // saveCanvas(Seed, "png");
-      sunrise = 0;
-      pixelDensity(1);
-      filters();
-      loop();
-    }
-    //   if (key === "c" || key === "C") {
-    //     poster = 0
-    //     filters()
-    //     loop()
-    //   }
-    if (key === "h" || key === "R") {
+
+    if (key === "h" || key === "H") {
       hiDef();
+      // noLoop()
+      // pixelDensity(5)
+      // noLoop()
+      // res(1)
+
+      // saveCanvas(Seed + "_HD", "png");
+    }
+
+    if (key === "t" || key === "T") {
+      if (title == 0) {
+        title = 1;
+        draw();
+      } else {
+        title = 0;
+        draw();
+      }
     }
   }
 
@@ -1060,9 +1117,29 @@ image: /assets/images/ultradao-cover.png
 
   function hiDef() {
     noLoop();
-    pixelDensity(6);
+    pixelDensity(5);
     draw();
     saveCanvas(Seed + "_HD", "png");
-    noLoop();
+    // noLoop()
+  }
+
+  function drawGlitch() {
+    // Vertical Strips
+    // Get the source x,y,width,height
+    for (let j = 0; j < height / strips; j++) {
+      let sx = 0;
+      let sy = j * strips;
+      let sw = width;
+      let sh = strips;
+
+      // Get the destination x,y,width,height
+      let dx = int(random(-10, 10));
+      let dy = sy;
+      let dw = width;
+      let dh = sh;
+
+      // Call the copy function with the given parameters
+      graph.copy(sx, sy, sw, sh, dx, dy, dw, dh);
+    }
   }
 </script>
