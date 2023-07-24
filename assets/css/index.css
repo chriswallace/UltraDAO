@@ -248,7 +248,7 @@ nav {
 }
 
 .momenta-details h1 {
-  @apply mb-2 md:mb-6 text-[#222] text-4xl lg:text-5xl;
+  @apply mb-4 text-[#222] text-3xl lg:text-4xl;
 }
 
 .preview-frame {
