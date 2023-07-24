@@ -315,3 +315,23 @@ nav {
 .preview-frame {
   @apply overflow-x-hidden;
 }
+
+.momenta-cover-button {
+  @apply border-0 text-white;
+  background: linear-gradient(180deg, #b78c69 0%, #916d4f 100%);
+  box-shadow: rgba(0, 0, 0, 0.14) 0 4px 4px,
+    inset rgba(229, 183, 145, 0.8) 0 1px 0;
+}
+
+.momenta-cover-button:hover {
+  @apply text-white;
+  background: linear-gradient(180deg, #c1946f 0%, #9d7656 100%);
+  box-shadow: rgba(0, 0, 0, 0.14) 0 4px 4px,
+    inset rgba(235, 186, 146, 0.8) 0 1px 0;
+}
+
+.momenta-cover-button:active {
+  color: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(180deg, #9d7656 0%, #ac8362 100%);
+  box-shadow: inset rgba(0, 0, 0, 0.24) 0 -4px 4px;
+}
