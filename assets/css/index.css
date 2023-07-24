@@ -261,7 +261,7 @@ nav {
 }
 
 .preview-frame #momentaPreview {
-  @apply h-[320px] sm:h-[420px] md:h-full flex items-center mb-16 md:mb-0;
+  @apply min-h-[320px] md:h-full flex items-center mb-16 md:mb-0;
 }
 
 .preview-frame canvas {
@@ -313,7 +313,7 @@ nav {
 }
 
 .preview-frame {
-  @apply overflow-x-hidden;
+  @apply md:overflow-x-hidden;
 }
 
 .momenta-cover-button {
