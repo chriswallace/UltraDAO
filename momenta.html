@@ -77,13 +77,16 @@ image: assets/images/momenta-preview.jpg
       <h2>Mint details</h2>
 
       <p class="mb-2 font-light">Editions: 400</p>
-      <p class="mb-2 font-light">Sale type: Dutch auction</p>
-      <p class="mb-2 font-light">Price: 1eth - 0.06eth</p>
+      <p class="mb-2 font-light">Sale type: Fixed price</p>
+      <p class="mb-2 font-light">Price: 0.06eth</p>
       <p class="mb-2 font-light">Date/time: July 26 @ 12PM EST</p>
       <p class="mb-2 font-light">
         Reserves: Available for
         <a href="https://ultradao.org/ultrapass">ULTRAPASS</a> and existing
         r0zk0 holders.
+        <a href="https://www.premint.xyz/momenta-by-r0zk0/"
+          >Register with Premint</a
+        >.
       </p>
       <p
         class="text-center mt-12 font-light text-sm uppercase text-stone-400 tracking-widest"
@@ -480,6 +483,7 @@ image: assets/images/momenta-preview.jpg
 
     mySize = min(windowWidth, windowHeight) * 0; //random(0.8,1.1);
 
+    document.getElementById("momentaPreview").innerHTML = "";
     var myCanvas = createCanvas(WIDTH, HEIGHT); //high);
     myCanvas.parent("momentaPreview");
     pixelDensity(1);
