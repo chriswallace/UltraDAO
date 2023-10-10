@@ -11,7 +11,7 @@
   }
 
   h1 {
-    @apply mb-4 pb-0 text-3xl md:text-4xl max-w-5xl leading-loose font-light;
+    @apply mb-4 pb-0 text-5xl max-w-5xl leading-loose font-light;
   }
 
   h2 {
@@ -248,12 +248,11 @@ h1 {
 }
 
 .preview-frame {
-  @apply flex justify-center items-center lg:aspect-[12/8] mt-6 md:pb-8 rounded-md;
-  background-image: url("/assets/images/momenta-frame.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: 100% auto;
-  background-color: #cec4ba;
+  @apply flex justify-center items-center aspect-[1/1] lg:aspect-[4/3] mt-6 md:pb-8 overflow-hidden bg-stone-300 rounded-md;
+}
+
+.preview-frame * {
+  @apply shadow-md;
 }
 
 .preview-frame #momentaPreview {
@@ -271,7 +270,7 @@ h1 {
 }
 
 .card-zoom {
-  @apply block items-end no-underline rounded-md relative flex items-end justify-center my-3 overflow-hidden shadow-xl h-96 rounded-2xl;
+  @apply block items-end no-underline relative flex items-end justify-center overflow-hidden shadow-xl aspect-[3/4] rounded;
 }
 
 .card-zoom:hover .card-zoom-image {
@@ -283,17 +282,24 @@ h1 {
 }
 
 .card-zoom .subtitle.above {
-  @apply bg-white rounded-full px-3 curated-subtitle;
-  display: inline-block;
-  font-size: 11px;
+  @apply bg-white rounded-full uppercase text-stone-400 font-medium inline-block mb-3;
+  font-size: 0.7rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.card-zoom .subtitle.below {
+  @apply text-base lg:text-lg mb-0;
 }
 
 .card-zoom-text {
-  @apply text-white mb-0 p-8 mb-2 z-10 w-full relative;
+  @apply text-white mb-0 p-4 lg:p-6 mb-2 z-10 w-full relative;
 }
 
 .card-zoom-text h2 {
-  @apply leading-tight block text-3xl;
+  @apply leading-tight block text-xl sm:text-2xl lg:text-3xl;
 }
 
 .alba-logo {
@@ -332,17 +338,21 @@ h1 {
   box-shadow: inset rgba(0, 0, 0, 0.24) 0 -4px 4px;
 }
 
-.animated-bg{
+.animated-bg {
   @apply absolute top-0 left-0 right-0 bottom-0 w-screen h-screen z-0;
 }
 
-body > .container{
+body > .container {
   @apply relative z-10;
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .marquee-text {
@@ -352,13 +362,13 @@ body > .container{
   animation: marquee 20s linear infinite; /* Adjusted time for smoother transition */
 }
 
-.marquee-text span{
+.marquee-text span {
   @apply mr-1;
 }
 
 /* For #elToAnimate */
 .elToAnimate {
-  @apply  text-center grid grid-cols-1 gap-4 content-center min-h-[60vh] md:min-h-[80vh] bg-[#000555] rounded-xl py-16 md:py-8 relative overflow-x-hidden;
+  @apply text-center grid grid-cols-1 gap-4 content-center min-h-[60vh] md:min-h-[80vh] bg-[#000555] rounded-xl py-16 md:py-8 relative overflow-x-hidden;
 }
 
 /* For the logo image */

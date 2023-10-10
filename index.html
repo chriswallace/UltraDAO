@@ -8,14 +8,33 @@ image: /assets/images/ultradao-cover.png
 
 <div id="elToAnimate" class="elToAnimate">
   <div>
-    <img src="/assets/images/foundation-worlds-logo.svg" alt="" class="logo-image">
+    <img
+      src="/assets/images/foundation-worlds-logo.svg"
+      alt=""
+      class="logo-image"
+    />
     <div class="now-open-banner relative z-10">
       <div class="marquee-scroll">
         <div class="marquee-text">
-          <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> <span>Now open</span> 
+          <span>Now open</span> <span>Now open</span> <span>Now open</span>
+          <span>Now open</span> <span>Now open</span> <span>Now open</span>
+          <span>Now open</span> <span>Now open</span> <span>Now open</span>
+          <span>Now open</span> <span>Now open</span> <span>Now open</span>
+          <span>Now open</span> <span>Now open</span> <span>Now open</span>
+          <span>Now open</span> <span>Now open</span> <span>Now open</span>
+          <span>Now open</span> <span>Now open</span> <span>Now open</span>
+          <span>Now open</span> <span>Now open</span> <span>Now open</span>
+          <span>Now open</span> <span>Now open</span> <span>Now open</span>
+          <span>Now open</span> <span>Now open</span> <span>Now open</span>
+          <span>Now open</span> <span>Now open</span> <span>Now open</span>
+          <span>Now open</span>
         </div>
       </div>
-      <img src="/assets/images/ultraworld-logo.svg" alt="" class="ultraworld-logo">
+      <img
+        src="/assets/images/ultraworld-logo.svg"
+        alt=""
+        class="ultraworld-logo"
+      />
     </div>
     <h1 class="heading">More than just a movement. It's a new paradigm.</h1>
     <a href="/ultraworld" class="submit-link">Learn more</a>
@@ -23,15 +42,17 @@ image: /assets/images/ultradao-cover.png
 </div>
 
 <script>
-const marqueeText = document.querySelector('.marquee-text');
-const marqueeScroll = document.querySelector('.marquee-scroll');
+  const marqueeText = document.querySelector(".marquee-text");
+  const marqueeScroll = document.querySelector(".marquee-scroll");
 
-const updateMarqueeSpeed = () => {
-  const textWidth = marqueeText.offsetWidth / 2;  // Assumes the text is duplicated exactly once
-  const duration = textWidth / 10;  // Adjust this value to control the speed
-  marqueeText.style.animationDuration = `${duration}s`;
-};
+  const updateMarqueeSpeed = () => {
+    const textWidth = marqueeText.offsetWidth / 2; // Assumes the text is duplicated exactly once
+    const duration = textWidth / 10; // Adjust this value to control the speed
+    marqueeText.style.animationDuration = `${duration}s`;
+  };
 
-updateMarqueeSpeed();
-window.addEventListener('resize', updateMarqueeSpeed);
+  updateMarqueeSpeed();
+  window.addEventListener("resize", updateMarqueeSpeed);
 </script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+<script type="module" src="/assets/js/background.js"></script>
