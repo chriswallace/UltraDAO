@@ -6,5 +6,5 @@
       {% include header.md %} {{ content }} {% include footer.md %}
       {% include google-analytics.md %}
     </div>
-  </body>
+  </body> 
 </html>

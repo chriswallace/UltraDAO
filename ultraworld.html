@@ -1,0 +1,85 @@
+---
+layout: default
+title: ULTRAWORLD
+description: A new Foundation World curated by UltraDAO.
+permalink: /ultraworld
+id: ultraworld
+image: assets/images/isles-preview-og.png
+---
+
+<div id="elToAnimate" class="elToAnimate">
+  <div>
+    <img src="/assets/images/foundation-worlds-logo.svg" alt="" class="logo-image">
+    <div class="now-open-banner relative z-10">
+      <div class="marquee-scroll">
+        <div class="marquee-text">
+          <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> <span>Open call</span> 
+        </div>
+      </div>
+      <img src="/assets/images/ultraworld-logo.svg" alt="" class="ultraworld-logo">
+    </div>
+    <h1 class="heading">Curating the world's best cryptoart.</h1>
+    <a href="https://forms.gle/3D4ztQjqqHUSCXe19" class="submit-link">Submit your art</a>
+  </div>
+</div>
+
+<script>
+const marqueeText = document.querySelector('.marquee-text');
+const marqueeScroll = document.querySelector('.marquee-scroll');
+
+const updateMarqueeSpeed = () => {
+  const textWidth = marqueeText.offsetWidth / 2;  // Assumes the text is duplicated exactly once
+  const duration = textWidth / 10;  // Adjust this value to control the speed
+  marqueeText.style.animationDuration = `${duration}s`;
+};
+
+updateMarqueeSpeed();
+window.addEventListener('resize', updateMarqueeSpeed);
+</script>
+
+<div class="pt-8 sm:pt-20 pb-12 md:grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+  <div class="lg:col-span-3">
+    <div class="{{ page.markdown }} max-w-none leading-6">
+      <div class="w-full max-w-none pb-8 max-w-prose prose">
+        <h2>Announcing ULTRAWORLD Exhibition 001: Blockchain Origins</h2>
+        <p>
+          ULTRAWORLD Exhibition 001 is the inaugural showcase event of the UltraDAO Foundation World. This exhibition is set to feature an eclectic array of cryptoart from top international artists.
+        </p>
+        <p>
+          Slated for November 2023, this exhibition seeks to cast a spotlight on a kaleidoscope of artistic styles, origins, and backgrounds. We're on a quest for avant-garde art pieces that embody unique narratives and enigmatic expressions. It’s not merely about displaying art; it’s about sharing the riveting stories and the profound ideologies that birthed them. This is a call to all visionary artists to come forth and share their oeuvre with the world.
+        </p>
+        <h3>Submission Guidelines</h3>
+        <p>
+          Artists are invited to submit <span class="underline decoration-gray-100 decoration-solid underline-offset-2">one artwork</span> with a detailed description and/or background on the piece. Submissions should be in a digital format and must not have been minted or sold previously. Pricing is up to you, however, we will be happy to make our own recommendation as well.
+        </p>
+        <h3>Next steps</h3>
+        <p>
+          We will email all selected artists no later than two weeks after the submission deadline. At this point, we will ask you to mint your piece to Foundation ahead of the exhibition.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="lg:col-span-2">
+    <div class="p-10 border border-2 border-neutral-700 rounded-md">
+      <h2>Key details</h2>
+      <p class="mb-2">
+        <strong>Submission Deadline:</strong> <span class="font-light">11am CST, November 2nd, 2023</span>
+      </p>
+      <p class="mb-2">
+        <strong>Exhibition Launch:</strong> <span class="font-light">November 18th, 2023</span>
+      </p>
+      <p class="mb-2">
+        <strong>Exhibition Venue:</strong> <span class="font-light">UltraDAO Digital Gallery, accessible online worldwide</span>
+      </p>
+      <p class="mb-10">
+        <strong>Artwork Sale Split:</strong> <span class="font-light">80% to the artist, 20% to UltraDAO</span>
+      </p>
+      <p class="text-center">
+        <a class="submit-link block w-full hover:bg-[#8E0022]"
+          href="https://forms.gle/3D4ztQjqqHUSCXe19"
+          >Submit your art</a
+        >
+      </p>
+    </div>
+  </div>
+</div>

@@ -73,8 +73,7 @@ module.exports = {
       borderRadius: {
         none: "0",
         sm: "0.125rem",
-        DEFAULT: "0.25rem",
-        DEFAULT: "4px",
+        DEFAULT: "0.25rem",  // Retain this or the next line, not both
         md: "0.375rem",
         lg: "30px",
         full: "9999px",
@@ -135,6 +134,7 @@ module.exports = {
     },
   },
   plugins: [
-    require("@tailwindcss/typography", "@tailwindcss/color", "@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
   ],
 };
