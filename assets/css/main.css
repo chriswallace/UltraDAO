@@ -248,7 +248,7 @@ h1 {
 }
 
 .preview-frame {
-  @apply flex justify-center items-center aspect-[1/1] lg:aspect-[4/3] mt-6 md:pb-8 overflow-hidden bg-stone-300 rounded-md;
+  @apply flex justify-center items-center aspect-[1/1] lg:aspect-[4/3] mt-6 md:pb-8 overflow-hidden bg-stone-800 rounded-md;
 }
 
 .preview-frame * {
